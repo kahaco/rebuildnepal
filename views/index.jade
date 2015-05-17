@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  if PROD
+    script(type='text/javascript', src='/build/js/bundle.min.js')
+  else
+    script(type='text/javascript', src='/build/js/bundle.js')
