@@ -52,7 +52,8 @@ To get around the limitation this is what we do:
         }
     ```
 
-2. In the above code we are basically triggering a action to get project's list, which looks like below:
+2. In the above code we are basically triggering a action to get project's list
+from ```Project Actions```, which looks like below:
 
     ```
     fetch() {
@@ -82,4 +83,5 @@ To get around the limitation this is what we do:
 
 4. Important bits.
     * Define data dependency for your component in ```componentWillMount```
-    * And resolve the promise using ```this.alt.resolve(promise)``` to make it compatible on the server side.
+    * And resolve the promise for data fetch using ```this.alt.resolve(promise)```
+		when implementing it in your ```Action``` to make it compatible on the server side.
