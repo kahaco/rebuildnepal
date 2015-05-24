@@ -1,8 +1,8 @@
-var React = require('react');
-var { Route, DefaultRoute } = require('react-router');
-var App = require('./app');
-var PledgePage = require('./pages/pledgePage');
-var ProjectPage = require('./pages/projectPage');
+'use strict';
+
+import React from 'react';
+import { Route, DefaultRoute } from 'react-router';
+import App from 'app';
 
 /**
  * Top level routes for the application. Add routes for additional
@@ -10,11 +10,11 @@ var ProjectPage = require('./pages/projectPage');
  * out as we go along as it is supported. Also look in (./components/navigation.js)
  * For more info: http://rackt.github.io/react-router/
  */
-var routes = (
-	<Route name='home' path='/' handler={ App }>
-		<DefaultRoute name='pledgePage' handler={ PledgePage } />
-		<Route name='project' path='project' handler={ ProjectPage } />
+const routes = (
+	<Route name='app' path='/' handler={ App }>
+		<DefaultRoute name='pledge' handler={ require('./pages/pledge') } />
+		<Route name='project' path='project' handler={ require('./pages/project') } />
 	</Route>
 );
 
-module.exports = routes;
+export default routes;

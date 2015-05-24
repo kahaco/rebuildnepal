@@ -1,18 +1,16 @@
-var React = require('react');
-var { RouteHandler, Link } = require('react-router');
-var { PropTypes } = React;
-var Navigation = require('./components/navigation');
+import React from 'react';
+import { RouteHandler, Link } from 'react-router';
+import Navigation from 'components/navigation';
 
 /**
  * App component which houses all the child routes.
  * @class AppComponent
  */
-var App = React.createClass({
+const App = React.createClass({
 	propTypes: {
-		params: PropTypes.object.isRequired,
-		query: PropTypes.object.isRequired
+		params: React.PropTypes.object.isRequired,
+		query: React.PropTypes.object.isRequired
 	},
-
 	render() {
 		return (
 			<div>
