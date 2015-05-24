@@ -2,6 +2,9 @@ import React from 'react';
 import Iso from 'iso';
 import ErrorPage from 'pages/error';
 
+/**
+ * Alt resolver is used for Isomorphic Rendering.
+ */
 class AltResolver {
 	constructor() {
 		this._toResolve = [];
@@ -20,7 +23,7 @@ class AltResolver {
 	}
 
 	async render(Handler, flux, force = false) {
-		if (process.env.Browser && !force) {
+		if (process.env.BROWSER && !force) {
 			return null;
 
 		} else {
@@ -35,7 +38,6 @@ class AltResolver {
 				const app = React.renderToString(React.createElement(Handler, { flux }));
 				content = { body: Iso.render(app, flux.flush()) };
 			} catch (err) {
-				console.log(err);
 				const app = React.renderToString(React.createElement(ErrorPage));
 				content = { body: Iso.render(app, flux.flush()) }
 			}

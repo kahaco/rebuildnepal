@@ -7,7 +7,6 @@ const logger = require('koa-logger');
 const helmet = require('koa-helmet');
 const send = require('koa-send');
 const mount = require('koa-mount');
-
 const router = require('./router');
 
 const app = koa();
