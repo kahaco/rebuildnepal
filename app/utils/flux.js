@@ -8,7 +8,7 @@ class Flux extends Alt {
 		super(config);
 		this._resolver = new AltResolver();
 
-		//actions
+		//Actions
 		this.addActions('requests', require('actions/requests'));
 		this.addActions('projects', require('actions/projects'));
 
@@ -21,8 +21,8 @@ class Flux extends Alt {
 		this._resolver.resolve(result);
 	}
 
-	render(handler) {
-		return this._resolver.render(handler ,this);
+	render(route) {
+		return this._resolver.render(route ,this);
 	}
 }
 

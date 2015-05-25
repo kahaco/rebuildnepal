@@ -12,12 +12,12 @@ module.exports = function *() {
 	});
 
 	const flux = new Flux();
-	const execRouter = promisify(router.run, function(handler) {
-		this.resolve(handler);
+	const execRouter = promisify(router.run, function(handler, state) {
+		this.resolve({ handler: handler, state: state });
 	});
 
-	const handler = yield execRouter();
-	const html = yield flux.render(handler);
+	const route = yield execRouter();
+	const html = yield flux.render(route);
 
 	this.render('index', {
 		content: html.body,

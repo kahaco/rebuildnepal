@@ -22,7 +22,7 @@ class AltResolver {
 		return this._toResolve.map((promise) => new Promise(promise));
 	}
 
-	async render(Handler, flux, force = false) {
+	async render({ handler: Handler, state }, flux, force = false) {
 		if (process.env.BROWSER && !force) {
 			return null;
 
@@ -32,10 +32,10 @@ class AltResolver {
 
 			try {
 
-				React.renderToString(React.createElement(Handler, { flux }));
+				React.renderToString(<Handler {...state} flux={flux} />);
 				const promises = this.mapPromises();
 				await Promise.all(promises);
-				const app = React.renderToString(React.createElement(Handler, { flux }));
+				const app = React.renderToString(<Handler {...state} flux={flux} />);
 				content = { body: Iso.render(app, flux.flush()) };
 			} catch (err) {
 				const app = React.renderToString(React.createElement(ErrorPage));
