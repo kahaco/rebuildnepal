@@ -1,10 +1,10 @@
-var React = require('react');
+import React from 'react';
 
 /**
  * PledgePage  Pledge page with info.
  * @class PledgePage
  */
-var PledgePage = React.createClass({
+const PledgePage = React.createClass({
 	render() {
 		return (
 			<div>Place holder pledge page.</div>
@@ -12,4 +12,4 @@ var PledgePage = React.createClass({
 	}
 });
 
-module.exports = PledgePage;
+export default PledgePage;

@@ -7,22 +7,33 @@ module.exports = {
 	module: {
 		loaders: [
 			{
+				test: /\.json$/,
+				loader: 'json'
+			},
+			{
 				test: /\.js?$/,
 				exclude: /(node_modules)/,
-				loader: 'babel-loader?optional[]=runtime'
+				loader: 'babel-loader?optional[]=runtime&stage=1'
 			}
 		]
 	},
-	devtool: 'sourcemap',
+	devtool: 'eval-source-map',
 	plugins: [
 		new webpack.optimize.DedupePlugin(),
 		new webpack.DefinePlugin({
-			ENV: JSON.stringify(process.env.NODE_ENV)
+			'process.env': {
+				BROWSER: JSON.stringify(true),
+				NODE_ENV: JSON.stringify('development')
+			}
 		}),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings: false
 			}
 		})
-	]
+	],
+	resolve: {
+		extensions: ['','.json','.js'],
+		modulesDirectories: ['node_modules', 'app']
+	}
 };

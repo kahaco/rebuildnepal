@@ -1,7 +1,8 @@
 extends layout
 
 block content
+  #content !{content}
   if PROD
-    script(type='text/javascript', src='/build/js/bundle.min.js')
+    script(type='text/javascript', src='/build/js/bundle.min.js' async)
   else
-    script(type='text/javascript', src='/build/js/bundle.js')
+    script(type='text/javascript', src='/build/js/bundle.js' async)

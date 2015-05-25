@@ -1,15 +1,17 @@
-var React = require('react');
-var { Link } = require('react-router');
+import React from 'react';
+import { Link } from 'react-router';
 
 /**
  * Navigation component for the app
+ * Info: If you declare a <Link> component, for which no route has been defined,
+ * react-router will throw an error.
  * @class NavigationComponent
  */
-var Navigation = React.createClass({
+const Navigation = React.createClass({
 	render() {
 		return (
 			<ul>
-				<Link to='home'>
+				<Link to='app'>
 					<li>Home</li>
 				</Link>
 				<Link to='project'>
@@ -20,4 +22,4 @@ var Navigation = React.createClass({
 	}
 });
 
-module.exports = Navigation;
+export default Navigation;
