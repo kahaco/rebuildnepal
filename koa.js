@@ -7,6 +7,7 @@ const logger = require('koa-logger');
 const helmet = require('koa-helmet');
 const send = require('koa-send');
 const mount = require('koa-mount');
+const favicon = require('koa-favicon');
 const router = require('./router');
 
 const app = koa();
@@ -21,6 +22,8 @@ app.use(jade.middleware({
 	layoutsPaths: path.join(__dirname, '/views/layouts'),
 	viewPath: path.join(__dirname, '/views')
 }));
+
+app.use(favicon(__dirname + '/app/assets/favicon.ico'));
 
 app.use(mount('/assets', function *() {
 	yield send(this, this.path, { root:__dirname + '/app/assets' });
