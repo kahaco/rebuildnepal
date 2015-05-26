@@ -22,6 +22,7 @@ To run in dev mode.
 ``` bash
 npm run dev-build
 ```
+*NOTE* Local version of the server can be accessed at http://localhost:10100/
 
 To run in prod.
 ``` bash
