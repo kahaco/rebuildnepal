@@ -7,7 +7,7 @@ import React from 'react';
 const PledgePage = React.createClass({
 	render() {
 		return (
-			<div>Place holder pledge page.</div>
+			<div className="container">Place holder pledge page.</div>
 		);
 	}
 });

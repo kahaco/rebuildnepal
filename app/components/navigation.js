@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Navbar, Nav } from 'react-bootstrap';
 
 /**
  * Navigation component for the app
@@ -10,14 +11,20 @@ import { Link } from 'react-router';
 const Navigation = React.createClass({
 	render() {
 		return (
-			<ul>
-				<Link to='app'>
-					<li>Home</li>
-				</Link>
-				<Link to='project'>
-					<li>Project</li>
-				</Link>
-			</ul>
+			<Navbar brand='Rebuild Nepal'>
+				<Nav>
+					<li>
+						<Link to='app' path='/'>
+							Home
+						</Link>
+					</li>
+					<li>
+						<Link to='project' path='/project'>
+							Project
+						</Link>
+					</li>
+			</Nav>
+		</Navbar>
 		);
 	}
 });

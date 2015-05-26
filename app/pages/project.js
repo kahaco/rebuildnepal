@@ -29,11 +29,11 @@ const ProjectPage = React.createClass({
 	},
 	renderProjects() {
 		return this.state.projects.map((project, index) => {
-			return <div key={index}>{ project.title }</div>
+			return <div key={index}>{ project.title }</div>;
 		});
 	},
 	render() {
-		return <div>{ this.renderProjects() }</div>
+		return <div className="container">{ this.renderProjects() }</div>;
 	}
 });
 
