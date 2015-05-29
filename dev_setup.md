@@ -18,6 +18,10 @@ Download and install nvm if you already do not have it installed
 Assumes iojs to be the default environment. If you want to run in node, change ```npm start```
 script in ```package.json``` from ``` node /bin/www ``` to ```node --harmony /bin/www```
 
+Use io.js
+
+    nvm use iojs
+
 ## Dev mode
     npm run dev-build
 
