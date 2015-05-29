@@ -1,33 +1,8 @@
 # Rebuild Nepal
 Help Nepal rebuild by matching donors, service providers and those who need help.
 
-# Dependencies
-Assumes iojs to be the default environment. If you want to run in node, change ```npm start```
-script in ```package.json``` from ``` node /bin/www ``` to ```node --harmony /bin/www```
-
-To get npm to install all dependencies, run
-``` bash
-npm install
-```
-on your checkout directory.
-
-To run in dev mode. Runs a watcher that watches for changes in javascript files,
-plus also boots up the koa application.
-``` bash
-npm run dev-build
-```
-on your checkout directory.
-
-To run in dev mode.
-``` bash
-npm run dev-build
-```
-*NOTE* Local version of the server can be accessed at http://localhost:10100/
-
-To run in prod.
-``` bash
-npm run prod
-```
+# Development Notes 
+Read [dev_setup.md](dev_setup.md) to setup your dev environment
 
 # Isomorphic Rendering
 
