@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node --harmony ./bin/www",
+    "start": "node ./bin/www",
     "dev-build": "gulp dev & npm run start",
     "prod": "gulp && NODE_ENV=prod npm run start"
   },
