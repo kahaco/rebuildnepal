@@ -2,7 +2,7 @@
 Help Nepal rebuild by matching donors, service providers and those who need help.
 
 # Development Notes 
-Read [dev_setup.md](dev_setup.md) to setup your dev environment
+Read [dev_setup.md](docs/dev_setup.md) to setup your dev environment
 
 # Isomorphic Rendering
 
