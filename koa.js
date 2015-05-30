@@ -33,6 +33,8 @@ app.use(mount('/build', function *() {
 	yield send(this, this.path, { root:__dirname + '/app/build' });
 }));
 
+app.use(mount('/api', require('./server/api/app')));
+
 app.use(require('./router'));
 
 module.exports = app;
