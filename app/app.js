@@ -14,7 +14,6 @@ const App = React.createClass({
 	render() {
 		return (
 			<div>
-				<h1>Rebuild Nepal</h1>
 					<Navigation />
 					<RouteHandler {...this.props} />
 			</div>

@@ -2,7 +2,11 @@
 <html>
 	<head>
 		<title>Rebuild Nepal</title>
-		<link rel="stylesheet" href="/assets/stylesheets/style.css">
+		<% if (PROD) { %>
+			<link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<% } else { %>
+			<link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<% } %>
 	</head>
 	<body>
 
