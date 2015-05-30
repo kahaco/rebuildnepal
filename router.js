@@ -19,7 +19,7 @@ module.exports = function *() {
 	const route = yield execRouter();
 	const html = yield flux.render(route);
 
-	this.render('index', {
+	yield this.render('index', {
 		content: html.body,
 		PROD: process.env.NODE_ENV
 	});

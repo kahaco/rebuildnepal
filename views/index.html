@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rebuild Nepal</title>
+		<link rel="stylesheet" href="/assets/stylesheets/style.css">
+	</head>
+	<body>
+
+		<section id="content"> <%= content %> </section>
+
+		<% if (PROD) { %>
+		<script type="text/javascript" src="/build/js/bundle.min.js" async></script>
+		<% } else { %>
+			<script type="text/javascript" src="/build/js/bundle.js" async></script>
+		<% } %>
+
+	</body>
+</html>
