@@ -14,6 +14,7 @@ const routes = (
 	<Route name='app' path='/' handler={ App }>
 		<DefaultRoute name='pledge' handler={ require('./pages/pledge') } />
 		<Route name='project' path='project' handler={ require('./pages/project') } />
+		<Route name='howitworks' path='howitworks' handler={ require('./pages/howitworks') } />
 	</Route>
 );
 

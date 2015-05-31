@@ -11,16 +11,22 @@ import { Navbar, Nav } from 'react-bootstrap';
 const Navigation = React.createClass({
 	render() {
 		return (
-			<Navbar brand='Rebuild Nepal'>
+			<Navbar brand={<a href='/'>Kaha.co : Rebuild Nepal</a>}>
 				<Nav>
-					<li>
-						<Link to='app' path='/'>
-							Home
+                    <li>
+						<Link to='project' path='/project'>
+							Projects
 						</Link>
 					</li>
-					<li>
+                    <li>
 						<Link to='project' path='/project'>
-							Project
+                            Partners
+						</Link>
+					</li>
+
+                    <li>
+						<Link to='howitworks' path='/howitworks'>
+                            How does it work
 						</Link>
 					</li>
 			</Nav>
